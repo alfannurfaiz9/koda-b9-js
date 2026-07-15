@@ -1,5 +1,5 @@
-const totalBelanja = 150000;
-const pembayaran = 200000;
+const pembayaran = 150000;
+const totalBelanja = 75000;
 let kembalian = pembayaran - totalBelanja;
 
 let limaPuluhRibu = 0;
@@ -29,8 +29,8 @@ while (kembalian > 0) {
 
 console.log(
   "Rp50.000: " + limaPuluhRibu + " lembar",
-  "Rp10.000: " + sepuluhRibu + " lembar",
-  "Rp5.000: " + limaRibu + " lembar",
-  "Rp2.000: " + duaRibu + " lembar",
-  "Rp1.000: " + seribu + " lembar",
+  "\nRp10.000: " + sepuluhRibu + " lembar",
+  "\nRp5.000: " + limaRibu + " lembar",
+  "\nRp2.000: " + duaRibu + " lembar",
+  "\nRp1.000: " + seribu + " lembar",
 );
