@@ -28,15 +28,15 @@ for (let i = 0; i < arrs.length; i++) {
     bool += 1;
   } else if (typeof arrs[i] === "object" && !Array.isArray(arrs[i])) {
     obj += 1;
-  } else {
+  } else if (Array.isArray(arrs[i])) {
     arr += 1;
   }
 }
 
 console.log(
   "Number: " + numb,
-  "String: " + str,
-  "Boolean: " + bool,
-  "Object: " + obj,
-  "Array: " + arr,
+  "\nString: " + str,
+  "\nBoolean: " + bool,
+  "\nObject: " + obj,
+  "\nArray: " + arr,
 );
