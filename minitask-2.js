@@ -1,16 +1,16 @@
-const pembelian = 50000;
-let diskon = 0;
-let persentaseDiskon = "";
+const totalSpend = 1100000;
+let discount = 0;
+let discountPercentage = "";
 
-if (pembelian >= 500000 && pembelian <= 1000000) {
-  diskon = 0.05 * pembelian;
-  persentaseDiskon = "5%";
-} else if (pembelian > 1000000) {
-  diskon = 0.1 * pembelian;
-  persentaseDiskon = "10%";
+if (totalSpend >= 500000 && totalSpend <= 1000000) {
+  discount = 0.05 * totalSpend;
+  discountPercentage = "5%";
+} else if (totalSpend > 1000000) {
+  discount = 0.1 * totalSpend;
+  discountPercentage = "10%";
 } else {
-  persentaseDiskon = "0%";
+  discountPercentage = "0%";
 }
 
-console.log(persentaseDiskon);
-console.log("Total diskon =", diskon);
+console.log(discountPercentage);
+console.log("Total diskon =", discount);
