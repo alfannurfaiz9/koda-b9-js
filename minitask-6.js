@@ -8,4 +8,4 @@ const {
   },
 } = data;
 
-console.log(id, author, tagPertama);
+console.log(`id: ${id} \nauthor: ${author} \ntag pertama: ${tagPertama}`);
