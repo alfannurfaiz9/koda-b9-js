@@ -23,11 +23,19 @@ const movie = {
   },
 
   setTitle(newTitle) {
-    this.title = newTitle;
+    if (typeof newTitle === "string") {
+      this.title = newTitle;
+    } else {
+      console.log("Judul tidak valid");
+    }
   },
 
   setImage(newImage) {
-    this.image = newImage;
+    if (typeof newImage === "string") {
+      this.image = newImage;
+    } else {
+      console.log("Gambar tidak valid");
+    }
   },
 };
 
