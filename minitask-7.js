@@ -14,7 +14,7 @@ const sumAndAverageScores = ({
   const total = matematika + bahasa_inggris + bahasa_indonesia + ipa;
   const average = total / 4;
 
-  return `Total nilai adalah: ${total}, Rata rata nilai adalah: ${average}`;
+  return `Total nilai adalah: ${total}, \nRata rata nilai adalah: ${average}`;
 };
 
 console.log(sumAndAverageScores(scores));
