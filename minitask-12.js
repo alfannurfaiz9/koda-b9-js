@@ -19,11 +19,9 @@ const getEmailThen = () => {
     });
 };
 
-getEmailThen();
+// getEmailThen();
 
 const getEmailAsyncAwait = async () => {
-  const emails = [];
-
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
 
@@ -33,34 +31,30 @@ const getEmailAsyncAwait = async () => {
 
     const datas = await response.json();
 
-    datas.map((data) => {
-      const email = data.email;
-      const asciiCode = [];
-      const newEmail = [];
-      let lowerEmail = "";
+    const newEmail = [];
 
-      for (let i = 0; i < email.length; i++) {
-        if (i === 0) {
-          asciiCode[asciiCode.length] = email[i].charCodeAt(0) + 32;
+    for (let i = 0; i < datas.length; i++) {
+      let test = "";
+      let stringFromAscii = "";
+
+      test = datas[i].email;
+
+      for (let j = 0; j < test.length; j++) {
+        if (test.charCodeAt(j) >= 65 && test.charCodeAt(j) <= 96) {
+          stringFromAscii += String.fromCharCode(test.charCodeAt(j) + 32);
         } else {
-          asciiCode[asciiCode.length] = email[i].charCodeAt(0);
+          stringFromAscii += test[j];
         }
       }
 
-      for (let i = 0; i < asciiCode.length; i++) {
-        newEmail.push(String.fromCharCode(asciiCode[i]));
-      }
+      newEmail.push(stringFromAscii);
+    }
 
-      newEmail.map((el) => (lowerEmail += el));
-
-      emails.push(lowerEmail);
-    });
+    console.log(newEmail);
+    return newEmail;
   } catch (error) {
     console.log(error);
   }
-
-  console.log(emails);
-  return emails;
 };
 
 getEmailAsyncAwait();
