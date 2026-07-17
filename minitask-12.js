@@ -35,13 +35,25 @@ const getEmailAsyncAwait = async () => {
 
     datas.map((data) => {
       const email = data.email;
-      const asciiCode = Array.from(email).map((char) => char.charCodeAt(0));
+      const asciiCode = [];
+      const newEmail = [];
+      let lowerEmail = "";
 
-      asciiCode[0] = asciiCode[0] + 32;
+      for (let i = 0; i < email.length; i++) {
+        if (i === 0) {
+          asciiCode[asciiCode.length] = email[i].charCodeAt(0) + 32;
+        } else {
+          asciiCode[asciiCode.length] = email[i].charCodeAt(0);
+        }
+      }
 
-      const lowerText = String.fromCharCode(...asciiCode);
+      for (let i = 0; i < asciiCode.length; i++) {
+        newEmail.push(String.fromCharCode(asciiCode[i]));
+      }
 
-      emails.push(lowerText);
+      newEmail.map((el) => (lowerEmail += el));
+
+      emails.push(lowerEmail);
     });
   } catch (error) {
     console.log(error);
