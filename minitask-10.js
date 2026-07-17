@@ -13,6 +13,7 @@ const customFilter = (arrs) => {
   return result;
 };
 
+// Method filter tidak bersifat mutasi
 const filteredTodos = todos.filter((todo) => todo !== input);
 const testCustomFilter = customFilter(todos);
 
