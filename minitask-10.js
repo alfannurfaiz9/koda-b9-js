@@ -14,6 +14,8 @@ const customFilter = (arrs) => {
 };
 
 // Method filter tidak bersifat mutasi
+// Method filter mereturn array baru sesuai dengan kondisi yang dimasukkan
+
 const filteredTodos = todos.filter((todo) => todo !== input);
 const testCustomFilter = customFilter(todos);
 
