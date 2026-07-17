@@ -19,7 +19,7 @@ const getEmailThen = () => {
     });
 };
 
-// getEmailThen();
+getEmailThen();
 
 const getEmailAsyncAwait = async () => {
   try {
@@ -40,7 +40,7 @@ const getEmailAsyncAwait = async () => {
       test = datas[i].email;
 
       for (let j = 0; j < test.length; j++) {
-        if (test.charCodeAt(j) >= 65 && test.charCodeAt(j) <= 96) {
+        if (test.charCodeAt(j) >= 65 && test.charCodeAt(j) <= 90) {
           stringFromAscii += String.fromCharCode(test.charCodeAt(j) + 32);
         } else {
           stringFromAscii += test[j];
